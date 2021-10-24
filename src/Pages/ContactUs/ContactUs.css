@@ -1,0 +1,32 @@
+.contact-us{
+    background-image: url('https://as2.ftcdn.net/v2/jpg/03/37/96/33/500_F_337963325_EJuPjWslX3vAFxJ59L3y1cm6IsSfo07s.jpg');
+    width: 100%;
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 40px;
+}
+.icon{
+    font-size: 18px;
+}
+.icon i{
+    font-size: 30px;
+    background-color: #42BFC2;
+    border-radius: 50%;
+    padding: 10px;
+    margin-left: 210px;
+}
+.send-btn{
+    width: 100%;
+    margin-top: 30px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+    background-color: #ff641d;
+    font-size: 18px;
+}
+.send-btn:hover{
+    background-color: #c74001;
+}

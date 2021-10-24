@@ -1,0 +1,23 @@
+.our-details{
+    background-image: url('https://as2.ftcdn.net/v2/jpg/02/76/15/85/500_F_276158586_h5RkwIgMQhvW1mfi7dNPV2GW1NGg3Fvb.jpg');
+    width: 100%;
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 40px;
+}
+.details{
+    color: white;
+    font-size: 18px;
+}
+#button-addon2{
+    color:white;
+    font-weight: 500;
+    background-color: #f75757;
+    border: none;
+}
+#button-addon2:hover{
+    background-color: red;
+    color: white;
+}

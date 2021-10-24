@@ -1,0 +1,19 @@
+.doctors-site{
+    background-image: url(https://i.ibb.co/2SQzgsT/banner-3.jpg);
+    height: 500px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.btn-booking{
+    color: #008298;
+    padding: 10px 20px;
+    border: none;
+    border: 1px solid white;
+}
+.btn-booking:hover{
+    color: white;
+    background: none;
+    border: 1px solid white;
+}

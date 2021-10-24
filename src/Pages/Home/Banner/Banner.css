@@ -1,0 +1,31 @@
+.banner{
+    background-image: url('https://aadhyadentalcare.com/assets/images/Banner2.png');
+    height: 500px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-blend-mode: overlay;
+}
+.banner-title h1{
+    color: white;
+    font-size: 48px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+}
+.banner-title p{
+    color: #e2e2e2;
+    font-size: 26px;
+}
+.btn-regular{
+    color: white;
+    background-color: #ff641d;
+    font-size: 22px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 30px;
+    width: 300px;
+}
+.btn-regular:hover{
+    background-color: #c74001;
+}

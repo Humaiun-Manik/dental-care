@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "name": "TEETH WHITENING",
+        "img": "https://i.ibb.co/GQnmxrx/service-1.jpg",
+        "description": "Everyone notices a bright, white, glowing smile. And everyone notices how confident you feel when you have that beautiful smile."
+    },
+    {
+        "id": 2,
+        "name": "IMPLANTS",
+        "img": "https://i.ibb.co/k8mqV5g/service-2.jpg",
+        "description": "Despite improvements in dental care, millions of Americans suffer tooth loss mostly due to tooth decay, periodontal disease, or injury."
+    },
+    {
+        "id": 3,
+        "name": "DENTISTRY",
+        "img": "https://i.ibb.co/nbRgY9x/service-3.jpg",
+        "description": "Dentistry is often also understood to subsume the now largely defunct medical specialty of stomatology."
+    },
+    {
+        "id": 4,
+        "name": "DENTISTRY",
+        "img": "https://i.ibb.co/1ThqG5J/service-4.jpg",
+        "description": "If you have missing teeth, your dentist can close — or bridge — the gaps in your smile with dental bridges."
+    },
+    {
+        "id": 5,
+        "name": "CROWNS",
+        "img": "https://i.ibb.co/gz9bMhy/service-5.jpg",
+        "description": "A crown, often called as a cap, is an artificial hollow cover resembling a natural tooth crown that restores."
+    },
+    {
+        "id": 6,
+        "name": "CROWNS",
+        "img": "https://i.ibb.co/YZwJJVZ/service-6.jpg",
+        "description": "Orthodontics may seem like purely aesthetic treatments for a more attractive smile, but that’s not always the case."
+    }
+]

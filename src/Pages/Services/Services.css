@@ -1,0 +1,17 @@
+hr.horizontal-line{
+    border: none;
+    height: 5px;
+    background-color: #ff5100;
+}
+.service-title h1{
+    font-size: 48px;
+    text-align: center;
+}
+.service-title span{
+    color: #ff5100;
+}
+.cart{
+    box-shadow: 4px 8px 12px gray;
+    border-radius: 5px;
+
+}

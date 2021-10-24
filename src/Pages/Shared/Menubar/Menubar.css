@@ -1,0 +1,22 @@
+.logo{
+    font-size: 25px;
+    font-weight: 700;
+}
+.logo:hover{
+    color: #FF7E3C !important;
+}
+.logo img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.menu-items{
+    font-size: 20px;
+    font-weight: 500;
+}
+.menu{
+    color: white !important;
+}
+.menu:hover{
+    color: #FF7E3C !important;
+}

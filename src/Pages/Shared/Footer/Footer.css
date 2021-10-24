@@ -1,0 +1,49 @@
+.footer-1st{
+    background-image: url(https://i.ibb.co/PmWqFqH/footer-bg.jpg);
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-blend-mode: overlay;
+}
+.follow-us{
+    padding-left: 50px;
+}
+.call{
+    background-color: #FF5100;
+    color: white;
+    font-size: 18px;
+    margin-right: 10px;
+}
+hr.horizontal{
+    width: 200px;
+    border: none;
+    height: 5px;
+    background-color: #ff5100;
+}
+.social-icon i{
+    font-size: 22px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    padding-top: 10px;
+    background-color: #004365;
+    text-align: center;
+    justify-content: center;
+    transition-duration: 0.7s;
+}
+.social-icon i:hover{
+    color: #004365;
+    background-color: white;
+}
+.footer-logo{
+    padding-top: 10px;
+}
+.footer-logo img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+.contact-btn{
+    font-size: 18px;
+    width: 200px;
+}

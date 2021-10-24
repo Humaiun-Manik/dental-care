@@ -1,0 +1,27 @@
+.treatment{
+    background-color: #66CCFF;
+}
+.welcome-message{
+    color: #C74001;
+    width: 0ch;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: text 10s steps(32) infinite alternate;
+    border-right: 3px solid #C74001;
+}
+@keyframes text{
+    0%{
+        width: 0ch;
+    }
+    50%{
+        width: 30ch;
+    }
+}
+thead tr{
+    background-color: #004365;
+    color: white;
+    font-size: 22px;
+}
+tbody tr:hover{
+    background-color: white;
+}
