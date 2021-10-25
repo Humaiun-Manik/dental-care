@@ -31,7 +31,7 @@ const Footer = () => {
                                 <div className="col-md-6">
                                     <img src="https://i.ibb.co/D1k8xgQ/dentalcare-promo-new.png" alt="" />
                                 </div>
-                                <div className="col-md-6 text-white follow-us">
+                                <div className="col-lg-6 col-md-12 text-white follow-us">
                                     <h6 className='pl-5'>Follow us</h6>
                                     <h3 className='pl-5'>Our Activity</h3>
                                     <hr className='horizontal' />

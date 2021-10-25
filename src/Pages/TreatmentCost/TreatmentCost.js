@@ -10,7 +10,7 @@ const TreatmentCost = () => {
                 <div className="col-md-8">
                     <h3 className='my-5 welcome-message'>Welcome to Dental Clinic Website!</h3>
                     <h3 style={{ color: '#790000', paddingBottom: '10px' }}>Approximate Cost of our Treatments:</h3>
-                    <Table striped bordered hover>
+                    <Table striped bordered>
                         <thead>
                             <tr>
                                 <th>Treatment Name</th>

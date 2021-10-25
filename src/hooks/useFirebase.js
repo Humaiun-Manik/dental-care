@@ -1,14 +1,77 @@
-import { getAuth, signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged } from "firebase/auth";
+import { getAuth, signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
 import { useEffect, useState } from "react";
 import initializeAuthentication from "../Pages/Login/Firebase/firebase.init";
 
 initializeAuthentication();
 
 const useFirebase = () => {
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [error, setError] = useState('');
+    const [isLogin, setIsLogin] = useState(false);
     const [user, setUser] = useState({});
 
     const auth = getAuth();
 
+    const handleEmailChange = e => {
+        setEmail(e.target.value);
+    }
+    const handlePasswordChange = e => {
+        setPassword(e.target.value);
+    }
+
+    const handleRegistration = e => {
+        e.preventDefault();
+        if (password.length < 6) {
+            setError('Your password must be 8-20 characters long.');
+            return;
+        };
+        if (!/(?=.* [A - Z].* [A - Z])/.test(password)) {
+            setError('Password must contain 2 upper case');
+            return;
+        }
+        if (!/(?=.*[!@#$&*])/.test(password)) {
+            setError('Password must contain 1 one special case letter.');
+            return;
+        }
+        if (!/(?=.*[0-9].*[0-9])/.test(password)) {
+            setError('Password must contain 2 two digits.');
+            return;
+        }
+        if (!/(?=.*[a-z].*[a-z].*[a-z])/.test(password)) {
+            setError('Password must contain 3 lowercase letters.');
+            return;
+        }
+        isLogin ? processSignIn(email, password) : registerNewUser(email, password);
+    }
+
+    const processSignIn = (email, password) => {
+        signInWithEmailAndPassword(auth, email, password)
+            .then(result => {
+                const user = result.user;
+                console.log(user);
+                setError('');
+            })
+            .catch(error => {
+                setError(error.message);
+            })
+    }
+
+    const registerNewUser = (email, password) => {
+        createUserWithEmailAndPassword(auth, email, password)
+            .then(result => {
+                const user = result.user;
+                console.log(user);
+                setError('');
+            })
+            .catch(error => {
+                setError(error.message);
+            })
+    }
+
+    const toggleLogin = e => {
+        setIsLogin(e.target.checked);
+    }
 
     const signInUsingGoogle = () => {
         const googleProvider = new GoogleAuthProvider();
@@ -35,6 +98,12 @@ const useFirebase = () => {
     }
 
     return {
+        handleEmailChange,
+        handlePasswordChange,
+        handleRegistration,
+        error,
+        toggleLogin,
+        isLogin,
         user,
         signInUsingGoogle,
         logOut

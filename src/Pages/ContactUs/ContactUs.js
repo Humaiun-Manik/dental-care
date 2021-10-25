@@ -8,7 +8,7 @@ const ContactUs = () => {
                 <Row xs={1} md={3} className="g-4">
                     <Col className="col-md-3"></Col>
                     <Col className="col-md-6">
-                        <h2 className="pt-5 pb-5 text-center text-white">CONTUCT FORM</h2>
+                        <h2 className="pt-5 pb-5 text-center text-white">CONTACT FORM</h2>
                         <h4 className="text-white">Contact us</h4>
                         <p className="text-white icon">Fill in the form below to contact us: <i className="fas fa-paper-plane"></i></p>
                         <hr className="horizontal-line" />

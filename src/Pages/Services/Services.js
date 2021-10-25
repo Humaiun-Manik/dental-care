@@ -12,7 +12,7 @@ const Services = () => {
     }, [])
 
     return (
-        <div className='container my-5'>
+        <div className='container my-3'>
             <div className='row'>
                 <div className="col-md-5">
                     <hr className='horizontal-line' />
@@ -24,7 +24,7 @@ const Services = () => {
                 <div className='row'>
                     {
                         services.map(service => <div
-                            key={service.id} className='col-md-4'>
+                            key={service.id} className='col-lg-4 col-md-6'>
                             <div className='cart border border m-2 mt-5'>
                                 <div className="cart-img">
                                     <img className='w-100' src={service.img} alt="" />
