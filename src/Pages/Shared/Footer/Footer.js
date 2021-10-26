@@ -51,14 +51,14 @@ const Footer = () => {
             <div style={{ backgroundColor: "#004365" }} className='py-2 text-white'>
                 <div className="container">
                     <div className="row">
-                        <div className="col-md-4 pt-2">
+                        <div className="col-md-4 pt-3">
                             <small>Copyright by Dental clinic 2021. All rights reserved</small>
                         </div>
                         <div className="col-md-4 footer-logo text-center">
-                            <p><img className='' src="https://i.ibb.co/NrZ4Bcs/logo.jpg" alt="" />DNTAL CLINIC</p>
+                            <p><img className='m-2' src="https://i.ibb.co/NrZ4Bcs/logo.jpg" alt="" />DNTAL CLINIC</p>
                         </div>
-                        <div className="col-md-4 text-center pt-2">
-                            <Link to='/contact'><button className='btn-regular contact-btn'>Contact Us</button></Link>
+                        <div className="col-md-4 text-center pt-3">
+                            <Link to='/contact'><button className='contact-btn'>Contact Us</button></Link>
                         </div>
                     </div>
                 </div>

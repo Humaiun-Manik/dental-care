@@ -11,7 +11,7 @@ const Service = () => {
         fetch('/services.json')
             .then(res => res.json())
             .then(data => setService(data.find(service => service.id === parseInt(serviceId))))
-    }, []);
+    }, [serviceId]);
 
     return (
         <div>

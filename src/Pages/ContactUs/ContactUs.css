@@ -5,6 +5,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
     padding-bottom: 40px;
 }
 .icon{
@@ -15,7 +16,7 @@
     background-color: #42BFC2;
     border-radius: 50%;
     padding: 10px;
-    margin-left: 210px;
+    margin-left: 200px;
 }
 .send-btn{
     width: 100%;

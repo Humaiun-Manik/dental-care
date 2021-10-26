@@ -1,5 +1,11 @@
-.treatment{
-    background-color: #66CCFF;
+.treatment-bg{
+    background-image: url(https://i.ibb.co/Wptfbdk/banner-3.jpg);
+    height: 1000px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
 }
 .welcome-message{
     color: #C74001;
@@ -18,10 +24,17 @@
     }
 }
 thead tr{
-    background-color: #004365;
     color: white;
     font-size: 22px;
+    background-color: #004365;
+    border: none;
+}
+tbody tr{
+    color: white;
+    font-size: 18px;
+    background-color: #004365df;
 }
 tbody tr:hover{
+    color: black;
     background-color: white;
 }

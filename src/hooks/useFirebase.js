@@ -1,18 +1,23 @@
-import { getAuth, signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
+import { getAuth, signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged, createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { useEffect, useState } from "react";
 import initializeAuthentication from "../Pages/Login/Firebase/firebase.init";
 
 initializeAuthentication();
 
 const useFirebase = () => {
+    const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
     const [isLogin, setIsLogin] = useState(false);
     const [user, setUser] = useState({});
+    const [isLoading, setIsLoading] = useState(true);
 
     const auth = getAuth();
 
+    const handleNameChange = e => {
+        setName(e.target.value);
+    }
     const handleEmailChange = e => {
         setEmail(e.target.value);
     }
@@ -26,7 +31,7 @@ const useFirebase = () => {
             setError('Your password must be 8-20 characters long.');
             return;
         };
-        if (!/(?=.* [A - Z].* [A - Z])/.test(password)) {
+        if (!/(?=.*[A-Z].*[A-Z])/.test(password)) {
             setError('Password must contain 2 upper case');
             return;
         }
@@ -45,11 +50,11 @@ const useFirebase = () => {
         isLogin ? processSignIn(email, password) : registerNewUser(email, password);
     }
 
-    const processSignIn = (email, password) => {
-        signInWithEmailAndPassword(auth, email, password)
+    // create new user
+    const registerNewUser = (email, password) => {
+        createUserWithEmailAndPassword(auth, email, password)
             .then(result => {
-                const user = result.user;
-                console.log(user);
+                setUserName();
                 setError('');
             })
             .catch(error => {
@@ -57,30 +62,37 @@ const useFirebase = () => {
             })
     }
 
-    const registerNewUser = (email, password) => {
-        createUserWithEmailAndPassword(auth, email, password)
+    // login with email and password
+    const processSignIn = (email, password) => {
+        setIsLoading(true);
+        signInWithEmailAndPassword(auth, email, password)
             .then(result => {
-                const user = result.user;
-                console.log(user);
+                setUser(result.user);
                 setError('');
             })
-            .catch(error => {
-                setError(error.message);
-            })
+            .finally(() => setIsLoading(false));
+    }
+
+    //set new user name
+    const setUserName = () => {
+        updateProfile(auth.currentUser, { displayName: name })
+            .then(result => {
+                setUser(result?.user);
+            });
     }
 
     const toggleLogin = e => {
         setIsLogin(e.target.checked);
     }
 
+    // google sign in
     const signInUsingGoogle = () => {
+        setIsLoading(true);
         const googleProvider = new GoogleAuthProvider();
-        signInWithPopup(auth, googleProvider)
-            .then(result => {
-                setUser(result.user);
-            })
+        return signInWithPopup(auth, googleProvider)
     }
 
+    // observe user state change
     useEffect(() => {
         const unsubscribed = onAuthStateChanged(auth, user => {
             if (user) {
@@ -88,16 +100,19 @@ const useFirebase = () => {
             } else {
                 setUser({});
             }
+            setIsLoading(false);
         });
         return () => unsubscribed;
-    }, [])
+    }, [auth])
 
     const logOut = () => {
+        setIsLoading(true);
         signOut(auth)
-            .then(() => { });
+            .then(() => { })
+            .finally(() => setIsLoading(false));
     }
-
     return {
+        handleNameChange,
         handleEmailChange,
         handlePasswordChange,
         handleRegistration,
@@ -105,8 +120,11 @@ const useFirebase = () => {
         toggleLogin,
         isLogin,
         user,
+        isLoading,
         signInUsingGoogle,
-        logOut
+        logOut,
+        setUser,
+        setIsLoading,
     }
 }
 export default useFirebase;

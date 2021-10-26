@@ -1,0 +1,25 @@
+.login-form{
+    margin: 50px 0;
+    box-shadow: 2px 4px 20px 0px gray;
+    width: 500px;
+    border: 1px solid white;
+    border-radius: 8px;
+}
+.login-form:hover{
+    border: 1px solid #008298;
+    border-radius: 8px;
+}
+.google-btn{
+    color: #31A056;
+    font-size: 18px;
+    padding: 5px 10px;
+    background-color: white;
+    border: 1px solid white;
+}
+.google-btn:hover{
+    border: 1px solid #273976;
+    border-radius: 5px;
+}
+.google-btn img{
+    width: 30px;
+}

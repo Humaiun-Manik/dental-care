@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 import './Doctors.css'
 
 const Doctors = () => {
@@ -9,7 +8,7 @@ const Doctors = () => {
         fetch('/doctors.json')
             .then(res => res.json())
             .then(data => setDoctors(data))
-    }, [])
+    }, []);
 
     return (
         <div>
@@ -41,8 +40,8 @@ const Doctors = () => {
                                 </div>
                                 <h3 className='m-2 pt-2'>{doctor.name}</h3>
                                 <hr />
-                                <p><i style={{ padding: '0px 10px', color: '#C74001' }} class="fas fa-envelope"></i>{doctor.email}</p>
-                                <p><i style={{ padding: '0px 10px', color: '#C74001' }} class="fas fa-phone"></i>{doctor.phone}</p>
+                                <p><i style={{ padding: '0px 10px', color: '#C74001' }} className="fas fa-envelope"></i>{doctor.email}</p>
+                                <p><i style={{ padding: '0px 10px', color: '#C74001' }} className="fas fa-phone"></i>{doctor.phone}</p>
                                 <p className='p-2'>{doctor.description}</p>
                             </div>
                         </div>)

@@ -4,13 +4,13 @@ import './TreatmentCost.css';
 
 const TreatmentCost = () => {
     return (
-        <div className="container treatment">
+        <div className="treatment-bg">
             <div className="row pb-5">
                 <div className="col-md-2"></div>
                 <div className="col-md-8">
-                    <h3 className='my-5 welcome-message'>Welcome to Dental Clinic Website!</h3>
+                    <h3 className='mt-5 mb-3 welcome-message'>Welcome to Dental Clinic Website!</h3>
                     <h3 style={{ color: '#790000', paddingBottom: '10px' }}>Approximate Cost of our Treatments:</h3>
-                    <Table striped bordered>
+                    <Table bordered>
                         <thead>
                             <tr>
                                 <th>Treatment Name</th>

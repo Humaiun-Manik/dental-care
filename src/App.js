@@ -6,6 +6,7 @@ import ContactUs from './Pages/ContactUs/ContactUs';
 import Doctors from './Pages/Doctors/Doctors';
 import Home from './Pages/Home/Home/Home';
 import Login from './Pages/Login/Login/Login';
+import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
 import NotFound from './Pages/NotFound/NotFound';
 import Service from './Pages/Service/Service';
 import Footer from './Pages/Shared/Footer/Footer';
@@ -33,9 +34,9 @@ function App() {
           <Route path="/treatmentCost">
             <TreatmentCost></TreatmentCost>
           </Route>
-          <Route path="/service/:serviceId">
+          <PrivateRoute path="/service/:serviceId">
             <Service></Service>
-          </Route>
+          </PrivateRoute>
           <Route path="/contact">
             <ContactUs></ContactUs>
           </Route>
